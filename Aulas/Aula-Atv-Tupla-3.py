@@ -1,15 +1,16 @@
-ns = ()
+meses = ("janeiro", "fevereiro", "março", "abril", "maio", "junho"
+        "junho", "agosto", "setembro", "outubro", "novembro", "dezembro")
+
+print ("===Meses do ano===")
+
 
 while True:
-    n = int(input("Digite um numero: "))
-    ns += (n, )
-    if (len(ns) == 5):
+    numero  = int(input("Digite um numero entre 1 e 12 para saber o mês: (-1 para encerrar)"))
+    if numero == -1:
         break
 
-print("Numeros digitados: ", ns)
-print("Maior numero: ", max(ns))
-print("Menor numero: ", min(ns))
-#print("Numeros com 5", ns)
-for i, valor in enumerate(ns):
-    if valor == 5:
-        print(f"O número 5 está no índice {i}")
+    if numero >= 1 and numero <= 12:
+
+        print(f"O mês ai oh: {meses[numero - 1]}")
+    else:
+        print("Tem esse numero não")
